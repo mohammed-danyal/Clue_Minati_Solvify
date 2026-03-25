@@ -114,11 +114,11 @@ function MainAppContent() {
         }
     };
 
-    if (!teamId) return <div className="min-h-screen bg-black text-white" />;
+    if (!teamId) return <div className="min-h-screen bg-transparent text-white" />;
 
     if (isScanning && !stageId && !correct) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-black text-white relative">
+            <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-transparent text-white relative z-10">
                 <div className="w-full max-w-sm border border-[#D4AF37]/40 bg-[#080808] p-4 shadow-[0_0_20px_rgba(212,175,55,0.1)] glow-panel relative">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-[#D4AF37] text-xs font-bold uppercase tracking-[0.2em]">Scanner Initialization</h2>
@@ -140,7 +140,7 @@ function MainAppContent() {
 
     if (stageId && !correct) {
         return (
-            <div className="min-h-screen flex items-center justify-center p-4 bg-black text-white relative">
+            <div className="min-h-screen flex items-center justify-center p-4 bg-transparent text-white relative z-10">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.05)_0,rgba(0,0,0,1)_100%)]"></div>
                 <div className="w-full max-w-md border border-[#D4AF37]/40 bg-[#080808] p-8 shadow-[0_0_20px_rgba(212,175,55,0.1)] glow-panel relative overflow-hidden transition-all duration-500 z-10">
 
@@ -194,7 +194,7 @@ function MainAppContent() {
 
     if (correct) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-black text-white transition-opacity duration-1000">
+            <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-transparent text-white transition-opacity duration-1000 z-10 relative">
                 <div className="text-center animate-pulse">
                     <div className="inline-block rounded-full bg-green-950 border border-green-500 p-4 mb-4 shadow-[0_0_20px_rgba(34,197,94,0.4)] transition-all">
                         <svg className="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +211,7 @@ function MainAppContent() {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center p-6 bg-black text-white relative">
+        <div className="min-h-screen flex items-center justify-center p-6 bg-transparent text-white relative z-10">
             <div className="absolute inset-0 bg-[#0a0a0a] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.08)_0,rgba(0,0,0,1)_70%)] opacity-70"></div>
 
             <div className="w-full max-w-lg text-center z-10">
@@ -258,7 +258,7 @@ function MainAppContent() {
 
 export default function AppMain() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-black flex items-center justify-center text-[#D4AF37] text-[10px] tracking-widest uppercase animate-pulse">Initializing Scanner...</div>}>
+        <Suspense fallback={<div className="min-h-screen bg-transparent flex items-center justify-center text-[#D4AF37] text-[10px] tracking-widest uppercase animate-pulse">Initializing Scanner...</div>}>
             <MainAppContent />
         </Suspense>
     );

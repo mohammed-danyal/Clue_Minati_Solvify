@@ -44,8 +44,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-background text-foreground transition-all duration-300">
-      <div className="w-full max-w-sm rounded-xl border border-yellow-500/30 bg-black/50 p-8 shadow-[0_0_20px_rgba(212,175,55,0.15)] backdrop-blur-sm sm:max-w-md">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-transparent text-foreground transition-all duration-300">
+      <div className="w-full max-w-sm rounded-xl border border-yellow-500/30 bg-black/80 p-8 shadow-[0_0_20px_rgba(212,175,55,0.15)] backdrop-blur-sm sm:max-w-md">
         <h1 className="mb-6 text-center text-3xl font-bold uppercase tracking-widest text-[#D4AF37]">
           Clueminati
         </h1>

@@ -118,7 +118,7 @@ export default function AdminDashboard() {
 
     if (!authed) {
         return (
-            <div className="min-h-screen flex items-center justify-center p-4 bg-black text-white">
+            <div className="min-h-screen flex items-center justify-center p-4 bg-transparent text-white relative z-10">
                 <form onSubmit={handleAuth} className="border border-gray-800 p-8 glow-panel relative z-10 bg-black/80 backdrop-blur-sm">
                     <h2 className="text-[#D4AF37] mb-4 text-sm font-bold uppercase tracking-widest">Admin Access</h2>
                     <input
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
     }
 
     return (
-        <div className="min-h-screen p-8 bg-black text-white font-mono relative">
+        <div className="min-h-screen p-8 bg-transparent text-white font-mono relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 relative z-10">
                 <h1 className="text-3xl font-bold uppercase tracking-widest text-[#D4AF37]">Clueminati Control</h1>
                 <div className="flex border border-gray-700 overflow-hidden bg-black">

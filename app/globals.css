@@ -40,20 +40,20 @@ body {
 /* Particle animation */
 @keyframes float {
   0% {
-    transform: translateY(0px) translateX(0px);
+    transform: translateY(20vh) translateX(-20px);
     opacity: 0;
   }
 
-  10% {
+  20% {
     opacity: 1;
   }
 
-  90% {
+  80% {
     opacity: 1;
   }
 
   100% {
-    transform: translateY(-80vh) translateX(30px);
+    transform: translateY(-120vh) translateX(30px);
     opacity: 0;
   }
 }
